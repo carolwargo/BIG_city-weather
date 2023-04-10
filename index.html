@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
     <script src="https://kit.fontawesome.com/16ccb834c2.js" crossorigin="anonymous"></script>
-    
+    <title>Weather Dashboard</title>
 </head>
 <body>
     
@@ -19,30 +18,35 @@
     </header>
     <!--HEADER END-->
 
-    <!--.weather__dashboard container-fluid-->
+    <!--.container-fluid weather__dashboard START-->
     <div class="container-fluid weather__dashboard">
       <div class="row">
         <div class="jumbotron jumbotron-fluid">
+          <!--.form-container START SEARCH CONTAINER-->
           <form class="form__container">
             <label for="citySearch">
-              <h3>Search by city:</h3>
+              <h5>Search by city:</h5>
             </label>
+            <!--.form-in START INPUT-->
             <div class="form-in">
-              <input type="text" class="form-control" id="citySearchText">
-              <button type="submit" class="btn btn-dark" id="citySearchBtn">
+              <input type="text" class="form-control" id="citySearchText" placeholder="City name...">
+              <button type="button" class="btn btn-primary" id="SearchBtn">
                 <i class="fa fa-search" aria-hidden="true"></i>
               </button>
             </div>
+            <!--.form-in END INPUT-->
           </form>
+           <!--.form-container END SEARCH CONTAINER-->
 
-          <!--CARDS-->
+          <!--.cards START CARDS-->
           <div class="card">
             <ul class="list-group list-group-flush" id="searchHistoryList">
             </ul>
           </div>
+          <!--.cards END CARDS-->
         </div>
 
-  
+        
         <div class="col-md-9" id="searchResults">
           <div class="row_weather-conditions">
             <div class="col-md-12">
