@@ -50,13 +50,45 @@
 
           <!--start INPUT-->
           <div class="input-group mb-3">
-            <input id="searchText" type="text" class="form-control" placeholder="City name..." < class="input-group-append">
-            <button id="searchBtn" class="btn btn-primary" type="button" id="button-addon2"><i class="far fa-search">  
-            </i></button>
+            <input id="searchTerm" type="text" class="form-control" placeholder="City name...">
+            <button id="searchBtn" class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i>
+
+            </button>
           </div>
           <!--end INPUT-->
+          <!--start SEARCH HISTORY CARD-->
+          <div class="card">
+            <ul class="list-group list-group-flush"></ul>
+          </div>
+          <!--end SEARCH HISTORY CARD-->
         </div>
+        <!--end COLUMN 1-->
+
+        <!--start COLUMN 2-->
+        <div class="col-lg-9">
+          <div id="currentCity" class="mt-4"></div>   
+        </div>
+         <!--end COLUMN 2-->
+
       </div>
+       <!--end ROW-->
+
+       <!--start FORECAST CONTAINER-->
+       <div class="mt-4 col-md-12">
+          <h5 id="forecast5" class="mr-3 hide">5-Day Forecast</h5>
+
+          
+       <!--start FORECAST ROW-->
+          <div id="forecast" class="row"></div>
+        
+       <!--end FORECAST ROW-->
+       </div>
+      
+       <!--end FORECAST CONTAINER-->
     </div>
+   <!-- End CONTAINER -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
