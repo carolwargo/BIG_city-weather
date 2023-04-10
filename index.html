@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<lang ="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -29,89 +29,18 @@
     ></script>
     <title>Weather Dashboard</title>
   </head>
+
   <body>
-      <div class="container">
-      <nav class="navbar bg-black">
-          <div class="container-fluid">
-              <span class="navbar-brand fs-2 mb-0 h1 mx-auto text-white">Weather Dashboard</span>
-          </div>
-      </nav>
-  
-      <div class="row bg-body bg-body-secondary">
-          <div class="col-12 col-md-4 border-dark-subtle border-2 row">
-              <h2>Search for a city:</h2>
-              
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="City name..." aria-label="Username" aria-describedby="input-group-button-right">
-                <button type="button" class="btn btn-primary" id="input-group-button-right"><i class="fa fa-search" aria-hidden="true"></i></button>
-              </div>
-              <h6>Search History</h6>
-              <p id="history"></p>
-              
-          </div>
-          <div class="col-12 col-md-8 row">
-              <div class="current border m-3 border-dark-subtle border-2 col-12">
-                  <h2>
-                      <span id="city-name">City Name</span> 
-                      <img id="weather-icon"/>
-                  </h2>
-                  <h2>
-                      <span id="current-date"></span> 
-                  </h2>
-                  <!-- <img src="http://openweathermap.org/img/wn/01d@2x.png" id="icon"/> -->
-                  <p id="temp">Temp: </p>
-                  <p id="wind">Wind: </p>
-                  <p id="humid">Humidity: </p>
-              </div>
-              <div class="row">
-                  <!-- <div class="col-12">
-                      <h3>5-Day Forecast:</h3> -->
-                      <nav class="navbar bg-white">
-                          <div class="container-fluid">
-                              <span class="navbar-brand fs-3 mb-0 fw-bold">5-Day Forecast:</span>
-                          </div>
-                      </nav>
-                  </div>
-                  <div class="forecast col-2 m-3">
-                      <p id="date-0"></p>
-                      <p id="icon-0"></p>
-                      <p id="temp-0"></p>
-                      <p id="wind-0"></p>
-                      <p id="humid-0"></p>
-                  </div>
-                  <div class="forecast col-2 m-auto">
-                      <p id="date-1"></p>
-                      <p id="icon-1"></p>
-                      <p id="temp-1"></p>
-                      <p id="wind-1"></p>
-                      <p id="humid-1"></p>
-                  </div>
-                  <div class="forecast col-2 m-auto">
-                      <p id="date-2"></p>
-                      <p id="icon-2"></p>
-                      <p id="temp-2"></p>
-                      <p id="wind-2"></p>
-                      <p id="humid-2"></p>
-                  </div>
-                  <div class="forecast col-2 m-auto">
-                      <p id="date-3"></p>
-                      <p id="icon-3"></p>
-                      <p id="temp-3"></p>
-                      <p id="wind-3"></p>
-                      <p id="humid-3"></p>
-                  </div>
-                  <div class="forecast col-2 m-auto">
-                      <p id="date-4"></p>
-                      <p id="icon-4"></p>
-                      <p id="temp-4"></p>
-                      <p id="wind-4"></p>
-                      <p id="humid-4"></p>
-                  </div>
-                  
-              </div>
-          </div>
-      </div>
-  </div>
-      <script src="script.js"></script>
-  </body>
+    <!-- Main heading -->
+    <div class="bg-dark pt-2 pb-2"> 
+        <div class="container">
+            <h1 class="text-center text-white">Weather Dashboard</h1>
+        </div>
+    </div>
+    <!-- End Main heading -->
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
