@@ -4,72 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-          crossorigin="anonymous"></script>
-          <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-          integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous">
-          </script>
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- link dayjs for time -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous">
+        </script>
     <title>Weather Dashboard</title>
 </head>
 <body>
+  <div class="dashboard-container">
+    <!--.navbar CONTAINER-->
+  <nav class="navbar bg-black">
+        <!--.navbar-brand HEADER STYLING-->
+    <div class="container-fluid">
+       <!--.navbar-brand HEADER TEXT STYLING-->
+      <span class="navbar-brand fs-1 mb-0 h1 mx-auto text-white">Weather Dashboard</span>
+    </div>
+  </nav>
+
+  <!--CITY SEARCH CONTAINER -->
+  <div class="row">
     
-    <!--HEADER START-->
-    <header>
-        <div class="container-fluid">
-           <h1 class="Weather__Dashboard--Title">WEATHER DASHBOARD</h1> 
-    </header>
-    <!--HEADER END-->
+    <div class="col-12 col-md-4 row">
+      <h3 class="fs-5">SEARCH BY CITY</h3>
+      <!--INPUT CONTAINER-->
+      <div class="input-group mb-3 col-12">
+        <!--INPUT FIELD-->
+        <input id="searchCity" type="text" class="form-control" aria-label="input-group-sizing-default" placeholder="City name...">
+      </div>
+    </div>
+  </div>
+  </div>
 
-    <!--.container-fluid weather__dashboard START-->
-    <div class="container-fluid weather__dashboard">
-      <div class="row">
-        <div class="jumbotron jumbotron-fluid">
-          <!--.form-container START SEARCH CONTAINER-->
-          <form class="form__container">
-            <label for="citySearch">
-              <h5>Search by city:</h5>
-            </label>
-            <!--.form-in START INPUT-->
-            <div class="form-in">
-              <input type="text" class="form-control" id="citySearchText" placeholder="City name...">
-              <button type="button" class="btn btn-primary" id="SearchBtn">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </div>
-            <!--.form-in END INPUT-->
-          </form>
-           <!--.form-container END SEARCH CONTAINER-->
-
-          <!--.cards START CARDS-->
-          <div class="card">
-            <ul class="list-group list-group-flush" id="searchHistoryList">
-            </ul>
-          </div>
-          <!--.cards END CARDS-->
-        </div>
+  
 
 
-        <div class="col-md-9" id="searchResults">
-          <div class="row_weather-conditions">
-            <div class="col-md-12">
-              <div class="card">
-                <div class="card-body" id="currentWeather">
-                  <h3 class="card-title">
-                    <div id="currentCity"></div>
-                    <div id="todayDate"></div>
-                    <img src="" alt="" id="currentWeatherIcon">
-                  </h3>
-                  <ul ></ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    
+    
     <!--ADD JS-->
 </body>
 </html>
