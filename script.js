@@ -1,43 +1,26 @@
-
+//STORE INPUT VALS
+let city = $("#searchTerm").val();
+//API KEY
 var APIKey = "854256a8ee62109d903e838391cff6d6";
+//SEARCH BUTTON
 var searchBtn = document.getElementById ("searchBtn");
 
-var listOfCities =[];
- if(localStorage.getItem("history")){
-  listOfCities= JSON.parse(localStorage.getItem("history"))
- }
+let date= new Date();
 
-function performSearch () {
-  var inputValue = document.getElementById("cityToSearch").ariaValueMax.trim();
-  listOfCities.push(inputValue)
-  localStorage.setItem('history', JSON.stringify(listOfCities));
-  weatherSearch(inputValue)
-  forecastSearch(inputValue)
-}
-
-function weatherSearch(city) {
-  var queryURL ="https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIkey;
-  fetch(queryURL)
-}
-
-
-
-
-
-
-
-
-
-searchHistory(),
-
-//FIRST USER SEARCH//
-
-("#citySearchbtn").on("click", function(event) {
-  event.preventDefault();
-  let citySearched = $("#citySearchText").val();
-  $("#citySearchText").val("");
-  getCurrentWeatherConditions(citySearched);
-  getWeeklyForecast(citySearched);
+$("searchTerm").keypress(function(event){
+  if (event.keyCode ===13) {
+    event.preventDefault();
+    $("searchBtn").click();
+  }
 });
 
+$("#searchBtn").on("click", function() {
+  $('#foreast5').addClass('show');
 
+  //GET USER INPUT VAL
+  city= $("#seachTerm").val();
+
+  //RESET
+  $("searchTerm").val("");
+
+})
