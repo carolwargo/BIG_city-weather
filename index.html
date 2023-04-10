@@ -20,15 +20,43 @@
 </head>
 <body>
   <div class="dashboard-container">
-    <!--.navbar CONTAINER-->
+  <!--NAVBAR start-->
   <nav class="navbar bg-black">
-        <!--.navbar-brand HEADER STYLING-->
+        <!--NAVBAR-brand "HEADER" start-->
     <div class="container-fluid">
-       <!--.navbar-brand HEADER TEXT STYLING-->
+       <!--HEADER TEXT STYLING start-->
       <span class="navbar-brand fs-1 mb-0 h1 mx-auto text-white">Weather Dashboard</span>
     </div>
   </nav>
+  <!--NAVBAR end-->
 
+
+  <div class="row">
+    <div class="col-lg-3 bg-light pt-3 pb-3"> 
+
+      <h5>Search for a city:</h5>
+
+      <!--INPUT start -->
+      <div class="input-group mb-3"> 
+          <input id="searchTerm" type="text" class="form-control" placeholder="City name..." class="input-group-append">
+          <button id="searchBtn" class="btn btn-primary" type="button" id="button-addon2">
+            <i class="fa fa-search" aria-hidden="true"></i></button>
+      </div>
+      <!--INPUT end-->   
+
+      <!-- CARD start (UL-history display)-->
+      <div class="card"> 
+          <ul class="list-group list-group-flush list">
+          </ul>
+      </div> 
+      <!-- CARD end (UL- history display)-->
+  </div> 
+  <!-- COLUMN end -->
+
+
+
+
+  </div>
   
 </body>
 </html>
