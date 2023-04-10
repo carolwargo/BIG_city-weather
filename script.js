@@ -7,7 +7,18 @@ var listOfCities =[];
   listOfCities= JSON.parse(localStorage.getItem("history"))
  }
 
+function performSearch () {
+  var inputValue = document.getElementById("cityToSearch").ariaValueMax.trim();
+  listOfCities.push(inputValue)
+  localStorage.setItem('history', JSON.stringify(listOfCities));
+  weatherSearch(inputValue)
+  forecastSearch(inputValue)
+}
 
+function weatherSearch(city) {
+  var queryURL ="https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIkey;
+  fetch(queryURL)
+}
 
 
 
