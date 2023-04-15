@@ -17,6 +17,15 @@
 
 
   <body>
+    <!-- Background image -->
+<div
+class="bg-image"
+style="
+  background-image:url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/ny-city-nights-night-lights-christopher-haughian.jpg');
+  height: 100vh; 
+"
+>
+<!-- Background image -->
     <!-- MAIN HEADING -->
     <div class="bg-dark pt-2 pb-2"> 
         <div class="container">
@@ -32,13 +41,13 @@
       <div class="row">
 
         <!--start COLUMN-->
-        <div class="col-lg-3 bg-light pt-3 pb-3">
+        <div class="col-lg-3 bg-dark pt-3 pb-3 mt-4">
           <h5>Search by city</h5>
 
           <!--start INPUT-->
           <div class="input-group mb-3">
             <input id="searchTerm" type="text" class="form-control" placeholder="City name...">
-            <button id="searchBtn" class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i>
+            <button id="searchBtn" class="btn btn-white" type="button"><i class="fa fa-search" aria-hidden="true"></i>
 
             </button>
           </div>
@@ -62,11 +71,11 @@
 
        <!--start FORECAST CONTAINER-->
        <div class="mt-4 col-md-12">
-          <h5 id="forecastH5" class="mr-3 hide">5-Day Forecast</h5>
+          <h5 id="forecastH5" class="text-bg-dark p-3 mb-auto hide">5-DAY FORECAST</h5>
 
           
        <!--start FORECAST ROW-->
-          <div id="forecast" class="row"></div>
+          <div id="forecast" class="row justify-content-evenly"></div>
         
        <!--end FORECAST ROW-->
        </div>
@@ -74,7 +83,8 @@
        <!--end FORECAST CONTAINER-->
     </div>
    <!-- End CONTAINER -->
-
+  </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>

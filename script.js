@@ -82,56 +82,52 @@ $("#searchBtn").on("click", function() {
    
   }
 
-function getCurrentForecast () {
+  function getCurrentForecast () {
+    $.ajax({
+      url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + apiKey,
+      method: "GET"
+    }).then(function (response){
+      console.log(response)
+      console.log(response.dt)
+      $('#forecast').empty();
   
-  $.ajax({
-    url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + apiKey,
-    method: "GET"
-  }).then(function (response){
-
-    console.log(response)
-    console.log(response.dt)
-    $('#forecast').empty();
-
-    // variable to hold response.list
-    let results = response.list;
-    console.log(results)
-    
-    //declare start date to check against
-    // startDate = 20
-    //have end date, endDate = startDate + 5
-   
-    const today = dayjs();
-    const forecast = [];
-    
-    for (let i = 0; i < results.length; i++) {
-      const date = dayjs(results[i].dt_txt);
-    
-      // Only include entries for midday for the next 5 days
-      if (date.hour() === 12 && date.isAfter(today) && forecast.length < 5) {
-        const tempC = results[i].main.temp;
-        const tempF = Math.floor((tempC * 9/5) + 32);
-    
-        forecast.push({
-          day: date.format('dddd'),
-          tempF,
-        });
+      // Variable to hold response.list
+      let results = response.list;
+      console.log(results)
+  
+      // Declare start date to check against
+      // startDate = 20
+      // Have end date, endDate = startDate + 5
+      let startDate = new Date();
+      startDate.setDate(startDate.getDate() + 1);
+      startDate.setHours(0,0,0,0);
+  
+      let endDate = new Date();
+      endDate.setDate(startDate.getDate() + 5);
+      endDate.setHours(0,0,0,0);
+  
+      for (let i = 0; i < results.length; i++) {
+        let datetime = new Date(results[i].dt_txt);
+        if(datetime >= startDate && datetime <= endDate && datetime.getHours() === 12) {
+          let day = datetime.toLocaleDateString('en-US', {weekday: 'short'});
+          // Get the temperature and convert to Fahrenheit 
+          let temp = (results[i].main.temp - 273.15) * 1.80 + 32;
+          let tempF = Math.floor(temp);
+  
+          // Create new elements to display forecast data
+          const card = $("<div>").addClass("card col-md-2 ml-4 bg-primary text-white");
+          const cardBody = $("<div>").addClass("card-body p-3 forecastBody")
+          const cityDate = $("<h4>").addClass("card-title").text(day);
+          const temperature = $("<p>").addClass("card-text forecastTemp").text("Temperature: " + tempF + " °F");
+          const humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity: " + results[i].main.humidity + "%");
+          const image = $("<img>").attr("src", "https://openweathermap.org/img/w/" + results[i].weather[0].icon + ".png")
+  
+          // Append elements to forecast display
+          cardBody.append(cityDate, image, temperature, humidity);
+          card.append(cardBody);
+          $("#forecast").append(card);
+        }
       }
-    }
-    
-    console.log(forecast);
-    
-        const card = $("<div>").addClass("card col-md-2 ml-4 bg-primary text-white");
-        const cardBody = $("<div>").addClass("card-body p-3 forecastBody")
-        const cityDate = $("<h4>").addClass("card-title").text(dayjs().add(i, 'day').format('MM/DD/YYYY'));
-        const temperature = $("<p>").addClass("card-text forecastTemp").text("Temperature: " + tempF + " °F");
-        const humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity: " + results[i].main.humidity + "%");
-
-        const image = $("<img>").attr("src", "https://openweathermap.org/img/w/" + results[i].weather[0].icon + ".png")
-
-        cardBody.append(cityDate, image, temperature, humidity);
-        card.append(cardBody);
-        $("#forecast").append(card);
-
-      }
-    )}
+    });
+  }
+  

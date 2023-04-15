@@ -1,3 +1,38 @@
+/*BODY
+  
+ /* Main HEADING */ 
+  .text-white {
+   font-size: 4rem;
+   text-shadow: .25rem .25rem #007bff80;
+  }
+  
+
+ /* city-search HEADING*/
+ h5 {
+  text-shadow: .1rem .1rem black;
+  color: azure !important;
+ }
+
+  /* container-fluid*/
+  .container-fluid {
+    box-shadow: 2%;
+  }
+  
+/* city-search COLUMN CONTAINER*/
+.col-lg-3 {
+    background-color: black;
+  }
+  
+  .btn-white {
+    outline-color: blue;
+   
+  }
+  
+  .fa-search {
+    color:whitesmoke;
+    
+  }
+
 .hide {
     display: none;
 }
@@ -5,3 +40,6 @@
 .show {
     display: block;
 }
+
+
+
