@@ -1,9 +1,8 @@
 /*BODY
-  
- /* Main HEADING */ 
+  /* Main HEADING */ 
   .text-white {
    font-size: 4rem;
-   text-shadow: .25rem .25rem #007bff80;
+   text-shadow: .25rem .25rem #b1b4b680;
   }
   
 
@@ -22,15 +21,18 @@
 .col-lg-3 {
     background-color: black;
   }
-  
-  .btn-white {
-    outline-color: blue;
-   
-  }
-  
+
+/*BUTTON ICON*/
   .fa-search {
     color:whitesmoke;
-    
+  }
+  
+  /*BUTTON HOVER*/
+  .btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(7, 68, 236, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
   }
 
 .hide {
