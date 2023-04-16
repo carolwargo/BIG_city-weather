@@ -1,90 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-    crossorigin="anonymous"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-  crossorigin="anonymous"></script>
-  <!--dayjs LINK-->
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="crossorigin="anonymous"></script>
-  <title>Weather Dashboard</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!--dayjs LINK-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather Dashboard</title>
+  </head>
 
-
-  <body>
-    <!-- Background image -->
-<div
-class="bg-image"
-style="
-  background-image:url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/ny-city-nights-night-lights-christopher-haughian.jpg');
-  height: 100vh; 
-"
->
-    <!--start MAIN HEADING -->
-    <div class="bg-dark pt-2 pb-2"> 
+  <body> 
+      <!--start MAIN HEADER -->
+      <div class="pt-2 pb-2 bg-black">
         <div class="container">
-            <h1 class="text-center text-white">Weather Dashboard</h1>
+          <h1 class="text-center text-white mt-2">Weather Dashboard</h1>
         </div>
-    </div>
-    <!-- End MAIN HEADING -->
-
-    <!-- Start CONTAINER -->
-    <div class="container-fluid">
-
-      <!--start ROW-->
-      <div class="row">
-
-        <!--start COLUMN-->
-        <div class="col-lg-3 bg-dark pt-3 pb-3 mt-4">
-          <h5>Search by city</h5>
-
-          <!--start INPUT-->
-          <div class="input-group mb-3">
-            <input id="searchTerm" type="text" class="form-control" placeholder="City name...">
-            <button id="searchBtn" class="btn btn-white" type="button"><i class="fa fa-search" aria-hidden="true"></i>
-
-            </button>
-          </div>
-          <!--end INPUT-->
-          <!--start SEARCH HISTORY CARD-->
-          <div class="card">
-            <ul class="list-group list-group-flush"></ul>
-          </div>
-          <!--end SEARCH HISTORY CARD-->
-        </div>
-        <!--end COLUMN 1-->
-
-        <!--start COLUMN 2-->
-        <div class="col-lg-9">
-          <div id="currentCity" class="mt-4"></div>   
-        </div>
-         <!--end COLUMN 2-->
-
       </div>
-       <!--end ROW-->
+      <!-- end MAIN HEADER-->
 
-       <!--start FORECAST CONTAINER-->
-       <div class="mt-4 col-md-12">
-          <h5 id="forecastH5" class="text-bg-dark p-3 mb-auto hide">5-DAY FORECAST</h5>
+      <!-- Start current display CONTAINER -->
+      <div class="container-fluid bg-black">
+        <!--start ROW search by city & current city display-->
+        <div class="row p-md-2">
+          <!--start SEARCH COLUMN 1-->
+          <div class="col-lg-3 bg-black pt-2 pb-2 mt-2 text-white">
+            <h5>Search by city</h5>
 
-          
-       <!--start FORECAST ROW-->
-          <div id="forecast" class="row justify-content-evenly"></div>
-        
-       <!--end FORECAST ROW-->
-       </div>
+            <!--start search INPUT-->
+            <div class="input-group mb-2">
+              <input
+                id="searchTerm"
+                type="text"
+                class="form-control "
+                placeholder="City name..."
+              />
+              <button id="searchBtn" class="btn bg-white btn-outline-dark" type="button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+            <!--end search INPUT-->
+            <!--start SEARCH HISTORY CARD-->
+            <div class="card">
+              <ul class="list-group list-group-flush text-dark bg-white">
+               
+              </ul>
+            </div>
+            <!--end SEARCH HISTORY CARD-->
+          </div>
+          <!--end Search by city COLUMN 1-->
+
+          <!--start current city COLUMN 2-->
+          <div class="col-lg-9">
+            <div id="currentCity" class="mt-3 bg-white"></div>
+          </div>
+          <!--end current city COLUMN 2-->
+
+        </div> <!--end ROW search by city & current city display-->
+
+   
+       <!--start 5-DAY FORECAST CONTAINER-->
+       <div class="mt-2 col-md-12">
+        <!--5-DAY FORECAST HEADING-->
+        <h5 id="forecastH5" class="hide text-white fs-4 p-2 m-3">
+          5-DAY FORECAST
+        </h5>
+
+        <!--start FORECAST ROW-->
+        <div id="forecast" class="row justify-content-center justify-content-evenly">
+        </div>
+        <!--end FORECAST ROW-->
+        </div>
       
-       <!--end FORECAST CONTAINER-->
-    </div>
-   <!-- End CONTAINER -->
+    <!--end 5-DAY FORECAST CONTAINER-->
   </div>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--LINKS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

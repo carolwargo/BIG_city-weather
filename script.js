@@ -19,10 +19,11 @@ $("#searchBtn").on("click", function() {
 
   // get the value of the input from user
   city = $("#searchTerm").val();
-  
+
   // clear input box
   $("#searchTerm").val("");  
 
+  
   // full url to call api
   const queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
 
@@ -46,7 +47,7 @@ $("#searchBtn").on("click", function() {
 
     getCurrentConditions(response);
     getCurrentForecast(response);
-    makeList();
+    makeList(response);
 
     })
   });
