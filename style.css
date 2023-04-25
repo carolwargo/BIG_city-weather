@@ -1,3 +1,50 @@
+:root {
+  font-size: 12px;
+}
+
+/* Reduce padding of main header */
+.pt-2 {
+  padding: 0.25rem;
+}
+
+/* Reduce font size of main header */
+.text-center {
+  font-size: 1.2rem;
+}
+
+/* Reduce font size and padding of search by city column */
+.col-lg-3 {
+  font-size: 0.8rem;
+  padding: 0.25rem;
+}
+
+/* Reduce font size and padding of search input */
+.input-group {
+  font-size: 0.7rem;
+  padding: 0.15rem;
+}
+
+/* Reduce font size and padding of search history card */
+.card {
+  font-size: 0.7rem;
+  padding: 0.25rem;
+}
+
+/* Reduce font size of current city column */
+.col-lg-9 {
+  font-size: 0.8rem;
+}
+
+/* Reduce font size and padding of 5-day forecast container */
+.col-md-12 {
+  font-size: 0.8rem;
+  padding: 0.25rem;
+}
+
+/* Reduce font size of 5-day forecast heading */
+#forecastH5 {
+  font-size: 1rem;
+}
 /*MAIN header styling*/
 .text-center{
   font-size: 4rem;
