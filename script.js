@@ -3,6 +3,8 @@ let city = $("#searchTerm").val();
 // store api key
 const apiKey = "&appid=7ad91ac6ba800a72ceddff377184d9ed";
 
+
+
 let date = new Date();
 
 $("#searchTerm").keypress(function(event) { 
@@ -47,14 +49,14 @@ $("#searchBtn").on("click", function() {
 
     getCurrentConditions(response);
     getCurrentForecast(response);
-    makeList(response);
+    makeList(city);
 
     })
   });
 
-  function makeList() {
+  function makeList(city) {
     let listItem = $("<li>").addClass("list-group-item").text(city);
-    $(".list").append(listItem);
+    $(".list-group").append(listItem);
   }
 
   function getCurrentConditions (response) {
