@@ -9,30 +9,31 @@
 
 /* Reduce font size of main header */
 .text-center {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 /* Reduce font size and padding of search by city column */
 .col-lg-3 {
   font-size: 0.8rem;
-  padding: 0.25rem;
+  padding: 0.15rem;
 }
+
 
 /* Reduce font size and padding of search input */
 .input-group {
-  font-size: 0.7rem;
+  font-size: 1rem;
   padding: 0.15rem;
 }
 
 /* Reduce font size and padding of search history card */
 .card {
-  font-size: 0.7rem;
-  padding: 0.25rem;
+  font-size: 1rem;
+ 
 }
 
 /* Reduce font size of current city column */
 .col-lg-9 {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 /* Reduce font size and padding of 5-day forecast container */
