@@ -20,8 +20,7 @@ SO THAT I can plan a trip accordingly
 
 Type the city in "Big city search", search will be prompted by either a keystroke or clicking the search button. Current Day and 5-Day Forecast will be displayed. As well as search history.
 
-SCREENSHOT: carolwargo.github.io_06-Weather-Dashboard_.png
-
+![carolwargo github io_06-Weather-Dashboard_](https://user-images.githubusercontent.com/84477950/234631629-930ee5c7-0375-4f7c-8f94-61db82f8e18b.png)
 
 ## Credit 
 OpenWeather https://openweathermap.org/forecast5
