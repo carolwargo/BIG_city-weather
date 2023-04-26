@@ -20,12 +20,10 @@ SO THAT I can plan a trip accordingly
 
 Type the city in "Big city search", search will be prompted by either a keystroke or clicking the search button. Current Day and 5-Day Forecast will be displayed. As well as search history.
 
-DEMO: Screencastify
-https://github.com/carolwargo/06-Weather-Dashboard/blob/main/Weather-Dashboard.mp4
+SCREENSHOT: "C:\Users\carol\Downloads\carolwargo.github.io_06-Weather-Dashboard_.png"
 
 ## Credit 
 OpenWeather https://openweathermap.org/forecast5
-Screencastify- Google chrome-extension https://screencastify.com
 
 ## Contributors
 Following: https://www.contributor-covenant.org/ 
