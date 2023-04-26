@@ -29,4 +29,6 @@ OpenWeather https://openweathermap.org/forecast5
 Following: https://www.contributor-covenant.org/ 
 
 ## Questions
-https://avatars.githubusercontent.com/u/84477950?v=4
+![image](https://user-images.githubusercontent.com/84477950/234632010-47455558-9740-4e87-afd3-8ef9cb0ef250.png)
+https://github.com/carolwargo
+
