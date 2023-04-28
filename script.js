@@ -23,9 +23,11 @@ $("#searchBtn").on("click", function() {
   // GET input from user
   city = $("#searchTerm").val();
 
+  localStorage.setItem("searchTerm", city);
+
   // CLEAR input box  
   $("#searchTerm").val("");  
-
+  
   
   // CALL api
   const queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
@@ -35,19 +37,8 @@ $("#searchBtn").on("click", function() {
     method: "GET"
   })
   .then(function (response){
-
-    console.log(response)
-
-    console.log(response.name)
-    console.log(response.weather[0].icon)
-
+    
     let tempF = (response.main.temp - 273.15) * 1.80 + 32;
-    console.log(Math.floor(tempF))
-
-    console.log(response.main.humidity)
-
-    console.log(response.wind.speed)
-
     getCurrentConditions(response);
     getCurrentForecast(response);
     makeList(city);
@@ -93,13 +84,10 @@ $("#searchBtn").on("click", function() {
       method: "GET"
     }).then(function (response){
   
-      console.log(response)
-      console.log(response.dt)
       $('#forecast').empty();
   
       // VAR HOLD RESPONSE
       let results = response.list;
-      console.log(results)
   
       // DECLARE start/end date to check against
       let startDate = new Date();
